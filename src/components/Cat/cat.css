@@ -1,0 +1,44 @@
+.cat-container {
+  margin: 20px auto;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 0.75rem solid transparent;
+  border-image: url(https://www.publicdomainpictures.net/pictures/60000/velka/paw-prints-background-wallpaper-1377967652snH.jpg)
+    100 round;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8),
+    0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  line-height: 1.5;
+  margin: 10px;
+  padding: 10px;
+  font-style: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #508bf1;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4549a0;
+}
