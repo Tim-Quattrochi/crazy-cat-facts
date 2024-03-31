@@ -9,3 +9,34 @@ get {
   body: none
   auth: none
 }
+
+assert {
+  res.status: eq 200
+  res.body.length: gt 0
+}
+
+tests {
+  
+    test("should return cat facts with specific format", async function() {
+  
+      
+      expect(res.status).to.equal(200);
+      expect(res.body).to.be.an('array').that.has.lengthOf.at.least(1);
+      
+      const catFact = res.body[0];
+      
+      expect(catFact).to.have.property('status').that.is.an('object').and.has.property('verified', true);
+      expect(catFact).to.have.property('_id').that.is.a('string');
+      expect(catFact).to.have.property('user').that.is.a('string');
+      expect(catFact).to.have.property('text').that.is.a('string');
+      expect(catFact).to.have.property('__v').that.is.a('number');
+      expect(catFact).to.have.property('source').that.is.a('string');
+      expect(catFact).to.have.property('updatedAt').that.is.a('string').and.matches(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/);
+      expect(catFact).to.have.property('type').that.is.a('string').and.equal('cat');
+      expect(catFact).to.have.property('createdAt').that.is.a('string').and.matches(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z/);
+      expect(catFact).to.have.property('deleted').that.is.a('boolean').and.equal(false);
+      expect(catFact).to.have.property('used').that.is.a('boolean');
+    });
+  
+  
+}
