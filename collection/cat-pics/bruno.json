@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "cat-pics",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
